@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vw;
+  padding: 100px 30px;
+  font-family: 'Kanit', sans-serif;
+  background-color: var(--color-white);
+}
+
+input,
+label,
+button {
+  transition-duration: var(--transition-duration);
+}
