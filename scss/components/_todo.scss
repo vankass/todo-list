@@ -3,4 +3,71 @@
   flex-direction: column;
   width: 100%;
   max-width: 750px;
+  min-height: 90vh;
+  position: relative;
+
+
+  &__title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  &__form {
+    display: flex;
+    column-gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      pointer-events: none;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-55%);
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &__field-input {
+    padding-right: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 595px;
+    height: 35px;
+    padding: 0 32px 0 12px; 
+    border: 1px solid var(--color-purple-1);
+    border-radius: var(--border-radius);
+
+    &::placeholder {
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--color-grey-2);
+    }
+  }
+
+  &__list {
+    display: grid;
+  }
+
+  &__empty-message {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__list,
+  &__empty-message {
+    &:empty {
+      display: none;
+    }
+  }
 }
