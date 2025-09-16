@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vw;
+  padding: 100px 30px;
+  font-family: "Kanit", sans-serif;
+  background-color: var(--color-white);
+}
+
+input,
+label,
+button {
+  transition-duration: var(--transition-duration);
+}
+
+:root {
+  --color-white: #F7F7F7;
+  --color-black: #252525;
+  --color-purple-1: #6C63FF;
+  --color-purple-2: #5850DD;
+  --color-grey: #CDCDCD;
+  --color-red: #E50000;
+  --border-radius: 5px;
+  --input-height: 38px;
+  --transition-duration: 0.2s;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 750px;
+}
+
+/*# sourceMappingURL=style.css.map */
