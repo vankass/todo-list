@@ -16,7 +16,7 @@
   }
 
   &__content {
-    background: #fff;
+    background: var(--bg-color);
     padding: 18px;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -40,11 +40,12 @@
     width: 85%;
     height: 37px;
     padding: 0 32px 0 12px;
-    border: 1px solid var(--color-purple-1);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
 
-    color: var(--color-purple-1);
-    caret-color: var(--color-purple-1);
+    color: var(--border-color);
+    caret-color: var(--border-color);
+    background-color: transparent;
 
     &:focus {
       box-shadow: 0 0 0 1px rgba(108, 99, 255, 0.5);
@@ -54,7 +55,7 @@
       font-family: "Inter", sans-serif;
       font-size: 16px;
       font-weight: 400;
-      color: var(--color-grey-2);
+      color: var(--input-text-color);
     }
   }
 

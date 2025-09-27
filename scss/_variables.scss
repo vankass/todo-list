@@ -1,6 +1,8 @@
 :root {
   --color-white: #F7F7F7;
   --color-black: #252525;
+  --color-white-alpha: #F7F7F780;
+  --color-black-alpha: #25252580;
 
   --color-purple-1: #6C63FF;
   --color-purple-2: #5850DD;
@@ -8,10 +10,28 @@
   
   --color-grey-1: #CDCDCD;
   --color-grey-2: #C3C1E5;
+  --color-grey-3: #666666;
 
   --color-red: #E50000;
 
   --border-radius: 5px;
 
   --transition-duration: 0.2s;
+
+
+  --bg-color: var(--color-white);
+  --text-color: var(--color-black);
+  --text-color-alpha: var(--color-black-alpha);
+  --border-color: var(--color-purple-1);
+  --input-text-color: var(--color-grey-2);
+  --box-shadow: var(--color-grey-2);
+}
+
+:root.dark {
+  --bg-color: var(--color-black);
+  --text-color: var(--color-white);
+  --text-color-alpha: var(--color-white-alpha);
+  --border-color: var(--color-white);
+  --input-text-color: var(--color-grey-3);
+  --box-shadow: var(--color-white);
 }

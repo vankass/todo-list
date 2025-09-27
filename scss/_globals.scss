@@ -5,7 +5,9 @@ body {
   min-height: 90vh;
   padding: 40px 300px;
   font-family: 'Kanit', sans-serif;
-  background-color: var(--color-white);
+  background-color: var(--bg-color);
+  transition-duration: var(--transition-duration);
+  color: var(--text-color);
 }
 
 input,
