@@ -88,9 +88,18 @@ button {
   width: 545px;
   height: 23px;
   padding-block: 17px;
-  border-bottom: 1px solid var(--color-purple-1);
+  position: relative;
 }
-.todo-item:last-child {
+.todo-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--color-purple-1);
+  transition: opacity 0.1s;
+}
+.todo-item:last-child::after {
   border-bottom: none;
 }
 .todo-item:hover .todo-item__buttons {
@@ -138,6 +147,22 @@ button {
 .todo-item__checkbox:checked + .todo-item__label {
   color: rgba(37, 37, 37, 0.25);
   text-decoration: line-through;
+}
+.todo-item.is-disappering {
+  opacity: 0;
+  translate: -40% 0;
+  transition-duration: calc(var(--transition-duration) * 2);
+  pointer-events: none;
+}
+.todo-item.is-disappering::after {
+  opacity: 0;
+  transition: none;
+}
+.todo-item.is-disappering ~ .todo-item {
+  translate: 0 -100%;
+  transition-delay: var(--transition-duration);
+  transition-duration: var(--transition-duration);
+  pointer-events: none;
 }
 
 .todo {
