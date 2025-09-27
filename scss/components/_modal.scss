@@ -1,0 +1,66 @@
+.modal {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__content {
+    background: #fff;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    height: 289px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+
+  &__input {
+    width: 85%;
+    height: 37px;
+    padding: 0 32px 0 12px;
+    border: 1px solid var(--color-purple-1);
+    border-radius: var(--border-radius);
+
+    color: var(--color-purple-1);
+    caret-color: var(--color-purple-1);
+
+    &:focus {
+      box-shadow: 0 0 0 1px rgba(108, 99, 255, 0.5);
+    }
+
+    &::placeholder {
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--color-grey-2);
+    }
+  }
+
+  &__buttons {
+    margin-top: auto;
+    display: flex;
+    column-gap: 233px;
+  }
+}

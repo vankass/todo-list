@@ -78,7 +78,7 @@
     }
   }
 
-  &.is-disappering {
+  &.is-disappearing {
     opacity: 0;
     translate: -40% 0;
     transition-duration: calc(var(--transition-duration) * 2);
