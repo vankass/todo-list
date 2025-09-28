@@ -71,17 +71,12 @@
   }
 
   &__empty-message {
-    display: none;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     font-size: 20px;
     font-weight: 600;
-  }
-
-  &__list,
-  &__empty-message {
-    &:empty {
-      display: none;
-    }
   }
 
   &__select {
