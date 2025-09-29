@@ -24,8 +24,18 @@ function renderTasks() {
     emptyMessage.style.display = "none";
     tasks.forEach((task) => {
       const node = template.content.firstElementChild.cloneNode(true);
+
+      const checkbox = node.querySelector("[data-js-todo-item-checkbox]");
+      const label = node.querySelector("[data-js-todo-item-label]");
+
+      const uniqueId = `todo-${task.id}`;
+      checkbox.id = uniqueId;
+      label.setAttribute("for", uniqueId);
+
       node.dataset.taskId = task.id;
       node.querySelector("[data-js-todo-item-span]").textContent = task.text;
+      checkbox.checked = !!task.done;
+
       list.appendChild(node);
     });
   }
