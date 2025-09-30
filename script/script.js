@@ -7,7 +7,10 @@ const template = document.querySelector("[data-js-todo-template]");
 const list = document.querySelector("[data-js-todo-list]");
 const emptyMessage = document.querySelector("[data-js-todo-empty-message]");
 
-renderTasks();
+const select = document.querySelector("[data-js-todo-select]");
+select.value = "all";
+
+renderTasks(tasks);
 
 modalForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -35,17 +38,32 @@ list.addEventListener("click", (e) => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 
-  renderTasks();
+  renderTasks(filteredTask);
 });
 
-function renderTasks() {
+select.addEventListener("change", () => {
+  const filter = select.value;
+  let filteredTask = tasks;
+
+  if (filter === "all") {
+    filteredTask = tasks;
+  } else if (filter === "complete") {
+    filteredTask = tasks.filter((task) => task.done);
+  } else if (filter === "incomplete") {
+    filteredTask = tasks.filter((task) => !task.done);
+  }
+
+  renderTasks(filteredTask);
+});
+
+function renderTasks(filteredTask) {
   list.innerHTML = "";
 
-  if (tasks.length === 0) {
+  if (filteredTask.length === 0) {
     emptyMessage.style.display = "flex";
   } else {
     emptyMessage.style.display = "none";
-    tasks.forEach((task) => {
+    filteredTask.forEach((task) => {
       const node = template.content.firstElementChild.cloneNode(true);
 
       const checkbox = node.querySelector("[data-js-todo-item-checkbox]");
@@ -75,6 +93,6 @@ function addTask(text) {
 
   tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));
-  renderTasks();
+  renderTasks(tasks);
   modalInput.value = "";
 }
