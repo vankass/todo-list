@@ -46,7 +46,8 @@
       <template data-js-todo-template>
         <li class="todo__item todo-item" data-js-todo-item data-task-id>
           <input class="todo-item__checkbox" id="todo-1" type="checkbox" data-js-todo-item-checkbox>
-          <label class="todo-item__label" for="todo-1" data-js-todo-item-label><span data-js-todo-item-span></span></label>
+          <label class="todo-item__label" for="todo-1" data-js-todo-item-label><span
+              data-js-todo-item-span></span></label>
           <div class="todo-item__buttons">
             <button class="button button__edit" type="button" aria-label="Edit" title="Edit" data-js-todo-edit-button>
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,14 +69,15 @@
                 <path d="M10.5 9V12.75" stroke="currentColor" stroke-linecap="round" />
                 <path d="M7.5 9V12.75" stroke="currentColor" stroke-linecap="round" />
               </svg>
-  
+
             </button>
           </div>
         </li>
       </template>
     </ul>
+
     <div class="todo__empty-message" data-js-todo-empty-message>
-      <img class = "todo__empty-img" src="img/detective-light.svg" alt="" data-js-todo-theme-img>
+      <img class="todo__empty-img" src="img/detective-light.svg" alt="" data-js-todo-theme-img>
       <p class="todo__empty-text">Empty...</p>
     </div>
 
@@ -104,5 +106,5 @@
   <script src="script/theme.js" type="module"></script>
   <script src="script/script.js" type="module"></script>
 </body>
- 
+
 </html>

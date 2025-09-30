@@ -15,6 +15,22 @@ modalForm.addEventListener("submit", (e) => {
   addTask(taskText);
 });
 
+list.addEventListener("click", (e) => {
+  const deleteButton = e.target.closest("[data-js-todo-delete-button]");
+  if (!deleteButton) return;
+
+  const li = deleteButton.closest("li");
+  const id = Number(li.dataset.taskId);
+  li.remove();
+
+  const newTasks = tasks.filter((task) => task.id !== id);
+  tasks.length = 0;
+  tasks.push(...newTasks);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+
+  renderTasks();
+});
+
 function renderTasks() {
   list.innerHTML = "";
 
@@ -45,7 +61,7 @@ function addTask(text) {
   if (!text) return;
 
   const task = {
-    id: Date.now().toString(),
+    id: Date.now(),
     text: text,
     done: false,
   };
@@ -55,3 +71,4 @@ function addTask(text) {
   renderTasks();
   modalInput.value = "";
 }
+  
