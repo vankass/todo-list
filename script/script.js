@@ -17,16 +17,23 @@ modalForm.addEventListener("submit", (e) => {
 
 list.addEventListener("click", (e) => {
   const deleteButton = e.target.closest("[data-js-todo-delete-button]");
-  if (!deleteButton) return;
+  const checkbox = e.target.closest("[data-js-todo-item-checkbox]");
+  const li = e.target.closest("li");
 
-  const li = deleteButton.closest("li");
+  if (!li) return;
   const id = Number(li.dataset.taskId);
-  li.remove();
 
-  const newTasks = tasks.filter((task) => task.id !== id);
-  tasks.length = 0;
-  tasks.push(...newTasks);
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  if (deleteButton) {
+    li.remove();
+    const newTasks = tasks.filter((task) => task.id !== id);
+    tasks.length = 0;
+    tasks.push(...newTasks);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  } else if (checkbox) {
+    const task = tasks.find((task) => task.id === id);
+    task.done = checkbox.checked;
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }
 
   renderTasks();
 });
