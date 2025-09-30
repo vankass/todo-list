@@ -71,4 +71,3 @@ function addTask(text) {
   renderTasks();
   modalInput.value = "";
 }
-  

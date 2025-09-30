@@ -71,19 +71,16 @@ button {
 .button__theme {
   padding: 8px;
 }
-.button__edit, .button__delete {
+.button__delete {
   background-color: transparent;
   border: 0;
   padding: 0;
   color: var(--color-grey-1);
 }
-.button__edit svg, .button__delete svg {
+.button__delete svg {
   width: 100%;
   height: 100%;
   display: block;
-}
-.button__edit:hover {
-  color: var(--color-purple-1);
 }
 .button__delete:hover {
   color: var(--color-red);
