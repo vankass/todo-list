@@ -21,7 +21,7 @@
 
 ## 🌐 Демо
 Проект доступен онлайн через GitHub Pages:  
-[https://vankass.github.io/todo-list/]([https://vankass.github.io/todo-list/])  
+[https://vankass.github.io/todo-list/](https://vankass.github.io/todo-list/)  
 
 ## 📂 Запуск локально
 Если хочешь запустить проект у себя:  
