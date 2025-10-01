@@ -7,6 +7,7 @@ const template = document.querySelector("[data-js-todo-template]");
 const list = document.querySelector("[data-js-todo-list]");
 const emptyMessage = document.querySelector("[data-js-todo-empty-message]");
 
+const searchInput = document.querySelector("[data-js-todo-search-input]");
 const select = document.querySelector("[data-js-todo-select]");
 select.value = "all";
 
@@ -54,6 +55,20 @@ select.addEventListener("change", () => {
   }
 
   renderTasks(filteredTask);
+});
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+
+  list.querySelectorAll("li").forEach(li => {
+    const text = li.querySelector("[data-js-todo-item-span]").textContent.toLowerCase();
+
+    if (text.includes(query)) {
+      li.style.display = "flex";
+    } else {
+      li.style.display = "none";
+    }
+  });
 });
 
 function renderTasks(filteredTask) {
