@@ -1,30 +1,24 @@
 # 📝 ToDo List
 
-Простое приложение для управления задачами.  
-Учебный проект для закрепления навыков.
-Реализовано на **JavaScript**, с хранением данных в **LocalStorage**.  
+A simple task management application.  
+A learning project to practice JavaScript skills.  
+Built with **JavaScript**, using **LocalStorage** for data storage.  
 
-## 🚀 Возможности
-- Добавление задач  
-- Удаление задач  
-- Отметка выполнения  
-- Сохранение задач при перезагрузке страницы
-- Фильтрация задач
-- Поиск задач
-- Смена темы
+## 🚀 Features
+- Add tasks  
+- Delete tasks  
+- Mark tasks as completed  
+- Save tasks after page reload  
+- Filter tasks  
+- Search tasks  
+- Theme switching  
 
-## 🛠 Технологии
+## 🛠 Technologies
 - HTML5  
-- CSS3
+- CSS3  
 - SCSS  
 - JavaScript (ES6+)  
 
-## 🌐 Демо
-Проект доступен онлайн через GitHub Pages:  
-[https://vankass.github.io/todo-list/](https://vankass.github.io/todo-list/)  
-
-## 📂 Запуск локально
-Если хочешь запустить проект у себя:  
-1. Склонируй репозиторий:
-   ```bash
-   git clone git@github.com:vankass/todo-list.git
+## 🌐 Demo
+The project is available online via GitHub Pages:  
+[https://vankass.github.io/todo-list/](https://vankass.github.io/todo-list/)
