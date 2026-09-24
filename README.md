@@ -1,5 +1,7 @@
 # 📝 ToDo List
 
+🇷🇺 [Русская версия](README.ru.md)
+
 A simple task management application.  
 A learning project to practice JavaScript skills.  
 Built with **JavaScript**, using **LocalStorage** for data storage.  
